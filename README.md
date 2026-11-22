@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/profile-banner.svg" alt="Tanuj — Software Engineer & Systems Architect" width="100%" />
+  <img src="assets/hero-banner.svg" alt="Tanuj — Software Engineer & Systems Architect" width="100%" />
 
   <br /><br />
 
