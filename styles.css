@@ -1,11 +1,12 @@
 :root {
-  --bg-obsidian: #040406;
-  --bg-charcoal: #0d0d14;
-  --text-primary: #f4f4f5;
-  --text-secondary: #d4d4d8;
-  --text-muted: #8b8b96;
-  --border-subtle: rgba(161, 161, 170, 0.22);
-  --violet-accent: rgba(139, 92, 246, 0.18);
+  --bg-obsidian: #03050a;
+  --bg-charcoal: #0d1024;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-subtle: rgba(56, 189, 248, 0.24);
+  --cyan-accent: rgba(34, 211, 238, 0.16);
+  --indigo-accent: rgba(129, 140, 248, 0.18);
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
@@ -21,7 +22,8 @@
 html,
 body {
   min-height: 100%;
-  background: radial-gradient(circle at 88% 12%, var(--violet-accent) 0%, transparent 54%),
+  background: radial-gradient(circle at 16% 38%, var(--cyan-accent) 0%, transparent 48%),
+              radial-gradient(circle at 88% 14%, var(--indigo-accent) 0%, transparent 52%),
               linear-gradient(135deg, var(--bg-obsidian) 0%, var(--bg-charcoal) 100%);
   color: var(--text-primary);
   font-family: var(--font-sans);
