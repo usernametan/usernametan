@@ -18,34 +18,26 @@
   const mouse = { x: -9999, y: -9999, nx: 0, ny: 0, active: false };
   const smoothMouse = { nx: 0, ny: 0 };
 
-  // 3D Wireframe Icosahedron Geometry
-  const phi = (1 + Math.sqrt(5)) / 2;
-  const rawVerts = [
-    [-1, phi, 0], [1, phi, 0], [-1, -phi, 0], [1, -phi, 0],
-    [0, -1, phi], [0, 1, phi], [0, -1, -phi], [0, 1, -phi],
-    [phi, 0, -1], [phi, 0, 1], [-phi, 0, -1], [-phi, 0, 1],
-  ].map(([x, y, z]) => {
-    const len = Math.hypot(x, y, z);
-    return { x: x / len, y: y / len, z: z / len };
-  });
+  // 3D Wireframe Cube Vertices & Edges
+  const cubeVerts = [
+    [-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
+    [-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1],
+  ].map(([x, y, z]) => ({ x, y, z }));
 
-  const edges = [
-    [0, 11], [0, 5], [0, 1], [0, 7], [0, 10],
-    [1, 5], [5, 11], [11, 10], [10, 7], [7, 1],
-    [3, 9], [3, 4], [3, 2], [3, 6], [3, 8],
-    [4, 9], [9, 8], [8, 6], [6, 2], [2, 4],
-    [1, 9], [5, 4], [11, 2], [10, 6], [7, 8],
-    [9, 5], [4, 11], [2, 10], [6, 7], [8, 1],
+  const cubeEdges = [
+    [0, 1], [1, 2], [2, 3], [3, 0],
+    [4, 5], [5, 6], [6, 7], [7, 4],
+    [0, 4], [1, 5], [2, 6], [3, 7],
   ];
 
   // Drifting architectural particles
-  const particles = Array.from({ length: 56 }, () => ({
+  const particles = Array.from({ length: 54 }, () => ({
     x: Math.random(),
     y: Math.random(),
-    vx: (Math.random() - 0.5) * 0.00018,
-    vy: (Math.random() - 0.5) * 0.00018,
-    r: 0.9 + Math.random() * 1.4,
-    violet: Math.random() < 0.25,
+    vx: (Math.random() - 0.5) * 0.00016,
+    vy: (Math.random() - 0.5) * 0.00016,
+    r: 0.9 + Math.random() * 1.3,
+    violet: Math.random() < 0.28,
   }));
 
   function resize() {
@@ -71,23 +63,74 @@
     return { x: x1, y: y2, z: z2 };
   }
 
-  function drawGrid(t) {
-    const spacing = 56;
-    const offsetX = ((t * 6 + smoothMouse.nx * 18) % spacing + spacing) % spacing;
-    const offsetY = ((t * 4 + smoothMouse.ny * 18) % spacing + spacing) % spacing;
+  function drawArchitecturalGrid(t) {
+    const spacing = 84;
+    const ox = ((t * 5 + smoothMouse.nx * 16) % spacing + spacing) % spacing;
+    const oy = ((t * 3 + smoothMouse.ny * 16) % spacing + spacing) % spacing;
 
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.024)";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.025)";
     ctx.lineWidth = 1;
     ctx.beginPath();
-    for (let x = offsetX - spacing; x < width + spacing; x += spacing) {
+    for (let x = ox - spacing; x < width + spacing; x += spacing) {
       ctx.moveTo(x, 0);
       ctx.lineTo(x, height);
     }
-    for (let y = offsetY - spacing; y < height + spacing; y += spacing) {
+    for (let y = oy - spacing; y < height + spacing; y += spacing) {
       ctx.moveTo(0, y);
       ctx.lineTo(width, y);
     }
     ctx.stroke();
+
+    // Subtle crosshair ticks at intersections
+    ctx.strokeStyle = "rgba(161, 161, 170, 0.14)";
+    ctx.beginPath();
+    for (let x = ox - spacing; x < width + spacing; x += spacing) {
+      for (let y = oy - spacing; y < height + spacing; y += spacing) {
+        ctx.moveTo(x - 3, y);
+        ctx.lineTo(x + 3, y);
+        ctx.moveTo(x, y - 3);
+        ctx.lineTo(x, y + 3);
+      }
+    }
+    ctx.stroke();
+  }
+
+  function drawPlanetAndMountain(t) {
+    const px = width * 0.14 - smoothMouse.nx * 14;
+    const py = height * 0.42 - smoothMouse.ny * 14;
+    const radius = Math.min(width, height) * 0.22;
+
+    // Eclipsed planet disc
+    ctx.fillStyle = "rgba(5, 5, 8, 0.94)";
+    ctx.beginPath();
+    ctx.arc(px, py, radius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Rim-lit crescent arc
+    const rimPulse = 0.45 + ((Math.sin(t * 0.8) + 1) * 0.5) * 0.25;
+    ctx.strokeStyle = `rgba(244, 244, 245, ${rimPulse})`;
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.arc(px, py, radius, -Math.PI * 0.62, Math.PI * 0.12);
+    ctx.stroke();
+
+    // Parallax mountain silhouette on lower left
+    const mx = -smoothMouse.nx * 22;
+    const my = -smoothMouse.ny * 10;
+    const mGrad = ctx.createLinearGradient(0, height * 0.55, 0, height);
+    mGrad.addColorStop(0, "rgba(39, 39, 42, 0.88)");
+    mGrad.addColorStop(1, "rgba(4, 4, 6, 0.98)");
+
+    ctx.fillStyle = mGrad;
+    ctx.beginPath();
+    ctx.moveTo(mx - 40, height + 20);
+    ctx.lineTo(mx - 40, height * 0.64 + my);
+    ctx.lineTo(mx + width * 0.06, height * 0.54 + my);
+    ctx.lineTo(mx + width * 0.13, height * 0.62 + my);
+    ctx.lineTo(mx + width * 0.21, height * 0.78 + my);
+    ctx.lineTo(mx + width * 0.34, height + 20);
+    ctx.closePath();
+    ctx.fill();
   }
 
   function drawParticles() {
@@ -96,65 +139,80 @@
         p.x = (p.x + p.vx + 1) % 1;
         p.y = (p.y + p.vy + 1) % 1;
       }
-      const px = p.x * width + smoothMouse.nx * 14;
-      const py = p.y * height + smoothMouse.ny * 14;
+      const px = p.x * width + smoothMouse.nx * 12;
+      const py = p.y * height + smoothMouse.ny * 12;
 
-      let alpha = 0.28;
+      let alpha = 0.26;
       if (mouse.active && !isCoarsePointer) {
         const dist = Math.hypot(px - mouse.x, py - mouse.y);
-        if (dist < 160) {
-          alpha = 0.28 + (1 - dist / 160) * 0.45;
+        if (dist < 170) {
+          alpha = 0.26 + (1 - dist / 170) * 0.48;
         }
       }
 
       ctx.fillStyle = p.violet
         ? `rgba(167, 139, 250, ${alpha})`
-        : `rgba(228, 228, 231, ${alpha * 0.8})`;
+        : `rgba(228, 228, 231, ${alpha * 0.85})`;
       ctx.beginPath();
       ctx.arc(px, py, p.r, 0, Math.PI * 2);
       ctx.fill();
     }
   }
 
-  function drawWireframe(t) {
-    const cx = width > 900 ? width * 0.76 : width * 0.5;
-    const cy = width > 900 ? height * 0.48 : height * 0.76;
-    const radius = Math.min(width, height) * (width > 900 ? 0.24 : 0.2);
+  function drawCubeCluster(t) {
+    const cubes = [
+      {
+        cx: width * 0.86 + smoothMouse.nx * 20,
+        cy: height * 0.36 + smoothMouse.ny * 18,
+        size: Math.min(width, height) * 0.13,
+        rx: 0.48 + t * 0.14 + smoothMouse.ny * 0.35,
+        ry: 0.65 + t * 0.2 + smoothMouse.nx * 0.45,
+        violet: false,
+      },
+      {
+        cx: width * 0.91 + smoothMouse.nx * 26,
+        cy: height * 0.62 + smoothMouse.ny * 22,
+        size: Math.min(width, height) * 0.1,
+        rx: -0.35 + t * 0.1 + smoothMouse.ny * 0.28,
+        ry: 0.9 - t * 0.16 + smoothMouse.nx * 0.35,
+        violet: true,
+      },
+    ];
 
-    const rx = t * 0.18 + smoothMouse.ny * 0.35;
-    const ry = t * 0.26 + smoothMouse.nx * 0.45;
+    for (const c of cubes) {
+      const projected = cubeVerts.map((v) => {
+        const r = rotate3D(v, c.rx, c.ry);
+        const scale = 2.8 / (3.4 - r.z);
+        return {
+          x: c.cx + r.x * c.size * scale,
+          y: c.cy + r.y * c.size * scale,
+          z: r.z,
+        };
+      });
 
-    const projected = rawVerts.map((v) => {
-      const r = rotate3D(v, rx, ry);
-      const scale = 2.6 / (3.2 - r.z);
-      return {
-        x: cx + r.x * radius * scale,
-        y: cy + r.y * radius * scale,
-        z: r.z,
-      };
-    });
+      for (const [i, j] of cubeEdges) {
+        const a = projected[i];
+        const b = projected[j];
+        const depthAlpha = 0.14 + ((a.z + b.z + 2) / 4) * 0.28;
+        ctx.strokeStyle = c.violet
+          ? `rgba(167, 139, 250, ${depthAlpha})`
+          : `rgba(244, 244, 245, ${depthAlpha})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
 
-    // Subtle ambient highlight sweep
-    const pulse = (Math.sin(t * 0.9) + 1) * 0.5;
-
-    for (const [i, j] of edges) {
-      const a = projected[i];
-      const b = projected[j];
-      const depthAlpha = 0.12 + ((a.z + b.z + 2) / 4) * 0.24;
-      ctx.strokeStyle = `rgba(212, 212, 216, ${depthAlpha + pulse * 0.05})`;
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(a.x, a.y);
-      ctx.lineTo(b.x, b.y);
-      ctx.stroke();
-    }
-
-    for (const p of projected) {
-      const alpha = 0.25 + ((p.z + 1) / 2) * 0.5;
-      ctx.fillStyle = `rgba(167, 139, 250, ${alpha})`;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
-      ctx.fill();
+      for (const p of projected) {
+        const alpha = 0.25 + ((p.z + 1) / 2) * 0.55;
+        ctx.fillStyle = c.violet
+          ? `rgba(167, 139, 250, ${alpha})`
+          : `rgba(244, 244, 245, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
   }
 
@@ -166,12 +224,13 @@
     smoothMouse.ny += (mouse.ny - smoothMouse.ny) * 0.06;
 
     ctx.clearRect(0, 0, width, height);
-    drawGrid(reducedMotion ? 0 : t);
+    drawArchitecturalGrid(reducedMotion ? 0 : t);
+    drawPlanetAndMountain(reducedMotion ? 0 : t);
     drawParticles();
-    drawWireframe(reducedMotion ? 0.4 : t);
+    drawCubeCluster(reducedMotion ? 0.3 : t);
 
     if (heroTilt && !reducedMotion && !isCoarsePointer) {
-      heroTilt.style.transform = `rotateX(${-smoothMouse.ny * 2.5}deg) rotateY(${smoothMouse.nx * 3}deg)`;
+      heroTilt.style.transform = `rotateX(${-smoothMouse.ny * 2.2}deg) rotateY(${smoothMouse.nx * 2.5}deg)`;
     }
 
     if (!reducedMotion) {
