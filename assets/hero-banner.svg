@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Tanuj — Software Engineer and Systems Architect">
+  <defs>
+    <!-- Rich Multi-Stop Obsidian / Slate / Graphite Background Blend -->
+    <linearGradient id="bg-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050507"/>
+      <stop offset="45%" stop-color="#0d1017"/>
+      <stop offset="100%" stop-color="#161923"/>
+    </linearGradient>
+
+    <!-- Ambient Radial Glows for Depth & Blending -->
+    <radialGradient id="glow-right" cx="0.80" cy="0.48" r="0.46">
+      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.16"/>
+      <stop offset="35%" stop-color="#64748b" stop-opacity="0.10"/>
+      <stop offset="70%" stop-color="#1e293b" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-left" cx="0.16" cy="0.62" r="0.42">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#334155" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="wave-grad-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#94a3b8" stop-opacity="0.28"/>
+      <stop offset="70%" stop-color="#e2e8f0" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad-2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#cbd5e1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="divider-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8fafc" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#94a3b8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e2e8f0" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="micro-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Layered Rich Base & Ambient Light Blends -->
+  <rect width="1200" height="420" fill="url(#bg-base)"/>
+  <rect width="1200" height="420" fill="url(#micro-grid)"/>
+  <rect width="1200" height="420" fill="url(#glow-left)"/>
+  <rect width="1200" height="420" fill="url(#glow-right)"/>
+
+  <!-- Flowing Layered Contour Waves -->
+  <path d="M 0 315 C 220 260, 420 365, 680 295 C 900 235, 1050 285, 1200 245" fill="none" stroke="url(#wave-grad-1)" stroke-width="1.4"/>
+  <path d="M 0 340 C 260 285, 480 385, 740 318 C 940 265, 1080 315, 1200 278" fill="none" stroke="url(#wave-grad-2)" stroke-width="1"/>
+  <path d="M 0 368 C 300 320, 520 400, 810 345 C 990 310, 1110 350, 1200 322" fill="none" stroke="#475569" stroke-opacity="0.22" stroke-width="0.9"/>
+
+  <!-- Subtle Diagonal Architectural Sweep -->
+  <rect x="-320" y="0" width="320" height="420" fill="url(#sweep)">
+    <animate attributeName="x" from="-320" to="1200" dur="10s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Crisp Outer Framing -->
+  <rect x="24" y="24" width="1152" height="372" rx="6" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+  <path d="M 24 52 L 24 24 L 52 24" fill="none" stroke="#94a3b8" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M 1176 52 L 1176 24 L 1148 24" fill="none" stroke="#94a3b8" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M 24 368 L 24 396 L 52 396" fill="none" stroke="#94a3b8" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M 1176 368 L 1176 396 L 1148 396" fill="none" stroke="#94a3b8" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- Animated Orbital & Architectural Geometry Emblem -->
+  <g transform="translate(960, 205)" fill="none">
+    <circle r="136" stroke="#334155" stroke-opacity="0.45" stroke-width="1"/>
+    <circle r="112" stroke="#475569" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="2 8"/>
+
+    <line x1="-152" y1="0" x2="152" y2="0" stroke="#475569" stroke-opacity="0.22" stroke-width="1"/>
+    <line x1="0" y1="-152" x2="0" y2="152" stroke="#475569" stroke-opacity="0.22" stroke-width="1"/>
+
+    <g>
+      <circle r="92" stroke="#94a3b8" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="26 10 4 10"/>
+      <circle cx="92" cy="0" r="3.5" fill="#cbd5e1"/>
+      <circle cx="-92" cy="0" r="2.5" fill="#64748b"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="38s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <circle r="60" stroke="#e2e8f0" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="5 7"/>
+      <circle cx="60" cy="0" r="4.5" fill="#f8fafc"/>
+      <circle cx="0" cy="-60" r="2.5" fill="#94a3b8"/>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="22s" repeatCount="indefinite"/>
+    </g>
+
+    <polygon points="0,-28 24,0 0,28 -24,0" stroke="#cbd5e1" stroke-opacity="0.45" stroke-width="1"/>
+    <circle cx="0" cy="0" r="7" fill="#f8fafc">
+      <animate attributeName="r" values="6;8.5;6" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Live Status Tag -->
+  <g transform="translate(82, 114)">
+    <rect x="0" y="-11" width="290" height="24" rx="12" fill="#ffffff" fill-opacity="0.05" stroke="#94a3b8" stroke-opacity="0.25"/>
+    <circle cx="15" cy="1" r="3.2" fill="#f8fafc">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="27" y="5" fill="#cbd5e1" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" letter-spacing="2.8">USERNAMETAN // PORTFOLIO</text>
+  </g>
+
+  <!-- Hero Typography -->
+  <text x="82" y="196" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1.5">Tanuj</text>
+  <rect x="82" y="218" width="520" height="1.5" fill="url(#divider-fade)"/>
+  <text x="82" y="254" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="0.2">Software Engineer &amp; Systems Architect</text>
+  <text x="82" y="288" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12.5" letter-spacing="1.4">DETERMINISTIC SIMULATION · APPLIED DSP/ML · FULL-STACK SYSTEMS · 3D INTERFACES</text>
+</svg>
