@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-label="TANUJ. — Software Engineer &amp; Systems Architect. Building deterministic simulations, forensic signal-processing pipelines, and spatial 3D web applications.">
+  <defs>
+    <!-- Deep Midnight Obsidian -> Navy Slate Base -->
+    <linearGradient id="bg-midnight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#03050a"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0d1024"/>
+    </linearGradient>
+
+    <!-- Upper-Right Indigo / Violet Atmospheric Glow -->
+    <radialGradient id="glow-indigo-ur" cx="0.88" cy="0.14" r="0.56">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.24"/>
+      <stop offset="38%" stop-color="#6366f1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#03050a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Left-Center Electric Cyan Eclipse Glow -->
+    <radialGradient id="glow-cyan-left" cx="0.16" cy="0.38" r="0.46">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.20"/>
+      <stop offset="45%" stop-color="#0891b2" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#03050a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sculpted Metallic Silver-White Display Text Gradient -->
+    <linearGradient id="title-silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="65%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Cyan -> Indigo -> Violet Horizon & Wave Gradients -->
+    <linearGradient id="aurora-wave-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#818cf8" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="aurora-wave-2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.32"/>
+      <stop offset="80%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#03050a" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="cube-cyan-indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.22"/>
+    </linearGradient>
+
+    <linearGradient id="mtn-midnight-1" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="45%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#03050a"/>
+    </linearGradient>
+
+    <linearGradient id="mtn-midnight-2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#03050a"/>
+    </linearGradient>
+
+    <linearGradient id="horizon-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#818cf8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="arch-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#94a3b8" stroke-opacity="0.06" stroke-width="0.8"/>
+      <path d="M -3 0 L 3 0 M 0 -3 L 0 3" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Base & Atmospheric Colour Blends -->
+  <rect width="1200" height="640" fill="url(#bg-midnight)"/>
+  <rect width="1200" height="640" fill="url(#arch-grid)"/>
+  <rect width="1200" height="640" fill="url(#glow-cyan-left)"/>
+  <rect width="1200" height="640" fill="url(#glow-indigo-ur)"/>
+
+  <!-- Top-Left Tag & Top-Right Architectural Slash -->
+  <g transform="translate(46, 44)">
+    <rect x="0" y="-8" width="6" height="6" fill="#22d3ee">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="16" y="-1.5" fill="#94a3b8" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Liberation Mono', monospace" font-size="10.5" font-weight="500" letter-spacing="3.5">DEVELOP  ·  SIMULATE  ·  INNOVATE</text>
+  </g>
+  <g transform="translate(1110, 44)" stroke="#e2e8f0" stroke-width="1.8" stroke-opacity="0.75">
+    <line x1="0" y1="4" x2="8" y2="-10"/>
+    <line x1="9" y1="4" x2="17" y2="-10"/>
+    <line x1="18" y1="4" x2="26" y2="-10"/>
+    <line x1="27" y1="4" x2="35" y2="-10" stroke="#22d3ee"/>
+    <circle cx="41" cy="3" r="1.5" fill="#818cf8" stroke="none"/>
+  </g>
+
+  <!-- Left: Dynamic Eclipsed Planet + Expanding Telemetry Rings -->
+  <g transform="translate(175, 250)">
+    <circle r="138" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.25">
+      <animate attributeName="r" values="138;185;138" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.02;0.35" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="138" fill="#040710" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.2"/>
+    <path d="M -30 -134 A 138 138 0 0 1 134 30" fill="none" stroke="#67e8f9" stroke-opacity="0.85" stroke-width="2.2">
+      <animate attributeName="stroke-opacity" values="0.45;0.95;0.45" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <g>
+      <circle cx="154" cy="0" r="3" fill="#22d3ee"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Left: Midnight Mountain Silhouette -->
+  <polygon points="0,640 0,395 45,355 92,382 142,320 198,378 240,365 305,455 375,515 445,565 495,640" fill="url(#mtn-midnight-1)" opacity="0.94"/>
+  <polygon points="0,640 0,445 78,405 135,440 190,410 265,495 340,560 410,640" fill="url(#mtn-midnight-2)" opacity="0.96"/>
+  <polyline points="45,355 142,320 198,378 240,365 305,455" fill="none" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.1"/>
+
+  <!-- Dynamic Flowing Aurora Waves -->
+  <path fill="none" stroke="url(#aurora-wave-1)" stroke-width="1.5">
+    <animate attributeName="d"
+      values="M 0 392 C 240 322, 480 448, 740 368 C 940 302, 1080 362, 1200 315;
+              M 0 368 C 240 438, 480 325, 740 402 C 940 348, 1080 292, 1200 348;
+              M 0 392 C 240 322, 480 448, 740 368 C 940 302, 1080 362, 1200 315"
+      dur="9s" repeatCount="indefinite"/>
+  </path>
+
+  <path fill="none" stroke="url(#aurora-wave-2)" stroke-width="1.1">
+    <animate attributeName="d"
+      values="M 0 422 C 280 378, 520 468, 800 402 C 980 358, 1100 405, 1200 372;
+              M 0 438 C 280 465, 520 368, 800 432 C 980 398, 1100 355, 1200 398;
+              M 0 422 C 280 378, 520 468, 800 402 C 980 358, 1100 405, 1200 372"
+      dur="13s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Right: Dynamic 3D Wireframe Cube Cluster -->
+  <g transform="translate(925, 125)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="5.5s" repeatCount="indefinite"/>
+
+      <polygon points="95,0 195,52 195,180 95,232 -5,180 -5,52" fill="#22d3ee" fill-opacity="0.025" stroke="url(#cube-cyan-indigo)" stroke-width="1.3"/>
+      <polyline points="-5,52 95,104 195,52" fill="none" stroke="#67e8f9" stroke-opacity="0.65" stroke-width="1.2"/>
+      <line x1="95" y1="104" x2="95" y2="232" stroke="#818cf8" stroke-opacity="0.55" stroke-width="1.2"/>
+
+      <polygon points="155,118 255,170 255,310 155,362 55,310 55,170" fill="#818cf8" fill-opacity="0.03" stroke="#818cf8" stroke-opacity="0.48" stroke-width="1.2"/>
+      <polyline points="55,170 155,222 255,170" fill="none" stroke="#a78bfa" stroke-opacity="0.55" stroke-width="1.1"/>
+      <line x1="155" y1="222" x2="155" y2="362" stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.1"/>
+
+      <polygon points="-40,420 155,362 275,410 110,465" fill="#22d3ee" fill-opacity="0.02" stroke="#38bdf8" stroke-opacity="0.28" stroke-width="1"/>
+
+      <circle cx="95" cy="104" r="3.5" fill="#67e8f9">
+        <animate attributeName="r" values="2.5;5;2.5" dur="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="155" cy="222" r="3" fill="#a78bfa">
+        <animate attributeName="r" values="2.2;4.4;2.2" dur="3.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Drifting Dynamic Cyan & Indigo Particles -->
+  <g>
+    <circle cx="340" cy="120" r="1.8" fill="#22d3ee" opacity="0.6">
+      <animate attributeName="cy" values="120;98;120" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="835" cy="145" r="2" fill="#818cf8" opacity="0.6">
+      <animate attributeName="cy" values="145;122;145" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.85;0.25" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="885" cy="390" r="1.6" fill="#67e8f9" opacity="0.5">
+      <animate attributeName="cy" values="390;370;390" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Refined Studio Typography -->
+  <text x="600" y="214" text-anchor="middle" fill="url(#title-silver)" font-family="'Space Grotesk', 'Inter', 'SF Pro Display', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="86" font-weight="700" letter-spacing="10">TANUJ.</text>
+  <text x="600" y="256" text-anchor="middle" fill="#cbd5e1" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Liberation Mono', monospace" font-size="13" font-weight="500" letter-spacing="6.5">SOFTWARE ENGINEER  &amp;  SYSTEMS ARCHITECT</text>
+
+  <!-- Slowly Rotating 4-Point Star Glyph -->
+  <g transform="translate(600, 292)">
+    <path d="M 0 -11 L 2.8 -2.8 L 11 0 L 2.8 2.8 L 0 11 L -2.8 2.8 L -11 0 L -2.8 -2.8 Z" fill="none" stroke="#67e8f9" stroke-opacity="0.85" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Editorial Subtitle -->
+  <text x="600" y="336" text-anchor="middle" fill="#94a3b8" font-family="'Inter', 'SF Pro Text', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="16" font-weight="400" letter-spacing="0.4">Building deterministic simulations, forensic signal-processing pipelines,</text>
+  <text x="600" y="362" text-anchor="middle" fill="#94a3b8" font-family="'Inter', 'SF Pro Text', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="16" font-weight="400" letter-spacing="0.4">and spatial 3D web applications.</text>
+
+  <!-- Integrated About Section Divider -->
+  <rect x="180" y="400" width="840" height="1" fill="url(#horizon-glow)"/>
+  <text x="600" y="432" text-anchor="middle" fill="#67e8f9" fill-opacity="0.78" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Liberation Mono', monospace" font-size="10" font-weight="500" letter-spacing="4.8">ABOUT  //  CORE ENGINEERING PILLARS</text>
+
+  <!-- Integrated 3-Column About Pillars -->
+  <g transform="translate(130, 466)">
+    <g>
+      <rect x="0" y="0" width="290" height="96" rx="4" fill="#22d3ee" fill-opacity="0.03" stroke="#22d3ee" stroke-opacity="0.30"/>
+      <text x="18" y="29" fill="#f8fafc" font-family="'JetBrains Mono', 'SF Mono', 'Liberation Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.6">01 / SIMULATION &amp; GAMES</text>
+      <text x="18" y="54" fill="#cbd5e1" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12.5" letter-spacing="0.2">Fixed-step 60 Hz · Seeded RNG</text>
+      <text x="18" y="75" fill="#94a3b8" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12" letter-spacing="0.2">Typed event bus · Canvas 2D</text>
+    </g>
+
+    <g transform="translate(325, 0)">
+      <rect x="0" y="0" width="290" height="96" rx="4" fill="#38bdf8" fill-opacity="0.03" stroke="#38bdf8" stroke-opacity="0.28"/>
+      <text x="18" y="29" fill="#f8fafc" font-family="'JetBrains Mono', 'SF Mono', 'Liberation Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.6">02 / DSP &amp; FORENSICS</text>
+      <text x="18" y="54" fill="#cbd5e1" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12.5" letter-spacing="0.2">SHA-256 chain of custody · Whisper</text>
+      <text x="18" y="75" fill="#94a3b8" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12" letter-spacing="0.2">Speaker comparison · Review gates</text>
+    </g>
+
+    <g transform="translate(650, 0)">
+      <rect x="0" y="0" width="290" height="96" rx="4" fill="#818cf8" fill-opacity="0.04" stroke="#818cf8" stroke-opacity="0.35"/>
+      <text x="18" y="29" fill="#f8fafc" font-family="'JetBrains Mono', 'SF Mono', 'Liberation Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.6">03 / SPATIAL &amp; LOCAL-FIRST</text>
+      <text x="18" y="54" fill="#cbd5e1" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12.5" letter-spacing="0.2">Three.js / WebGL · Offline PWA</text>
+      <text x="18" y="75" fill="#94a3b8" font-family="'Inter', 'Helvetica Neue', 'Liberation Sans', sans-serif" font-size="12" letter-spacing="0.2">Versioned sync · Spring Boot &amp; FastAPI</text>
+    </g>
+  </g>
+
+  <!-- Bottom Horizon Glow -->
+  <rect x="0" y="622" width="1200" height="1.5" fill="url(#horizon-glow)"/>
+</svg>
