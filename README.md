@@ -1,28 +1,18 @@
 <div align="center">
   <a href="https://usernametan.github.io/usernametan/">
-    <img src="assets/hero-banner-v3.svg" alt="TANUJ. — Software Engineer & Systems Architect. Building deterministic simulations, forensic signal-processing pipelines, and spatial 3D web applications." width="100%" />
+    <img src="assets/hero-banner-v4.svg" alt="TANUJ. — Software Engineer & Systems Architect. Building deterministic simulations, forensic signal-processing pipelines, and spatial 3D web applications. About: Simulation & Game Systems, Applied DSP & Forensics, Spatial & Local-First Apps." width="100%" />
   </a>
 
   <br /><br />
 
   <p>
-    <a href="https://github.com/usernametan"><img src="https://img.shields.io/badge/GITHUB-111111?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-    <a href="mailto:tanujbisht0712@gmail.com"><img src="https://img.shields.io/badge/EMAIL-262626?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-    <a href="#featured-systems"><img src="https://img.shields.io/badge/FEATURED_SYSTEMS-262626?style=flat-square" alt="Featured Systems" /></a>
-    <a href="#contact"><img src="https://img.shields.io/badge/CONTACT-262626?style=flat-square" alt="Contact" /></a>
-    <a href="https://usernametan.github.io/usernametan/"><img src="https://img.shields.io/badge/INTERACTIVE_HERO-%E2%86%97-fafafa?style=flat-square&labelColor=111111" alt="Interactive Hero" /></a>
+    <a href="https://github.com/usernametan"><img src="https://img.shields.io/badge/GITHUB_%E2%86%97-111111?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+    <a href="mailto:tanujbisht0712@gmail.com"><img src="https://img.shields.io/badge/EMAIL_%E2%86%97-262626?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+    <a href="#featured-systems"><img src="https://img.shields.io/badge/FEATURED_SYSTEMS_%E2%86%97-262626?style=flat-square" alt="Featured Systems" /></a>
+    <a href="#contact"><img src="https://img.shields.io/badge/CONTACT_%E2%86%97-262626?style=flat-square" alt="Contact" /></a>
+    <a href="https://usernametan.github.io/usernametan/"><img src="https://img.shields.io/badge/INTERACTIVE_HERO_%E2%86%97-fafafa?style=flat-square&labelColor=111111" alt="Interactive Hero" /></a>
   </p>
 </div>
-
----
-
-## About
-
-I design and engineer full-stack software systems with an emphasis on **clean architectural boundaries**, **deterministic execution**, and **high-craft interfaces**.
-
-- **Simulation & Game Systems:** Fixed-step 60 Hz engines · Seeded RNG · Typed event bus · Canvas 2D
-- **Applied DSP & Forensics:** SHA-256 chain of custody · Speech enhancement · Speaker comparison · Examiner review gates
-- **Spatial & Local-First Apps:** Three.js / WebGL · Offline PWA storage · Versioned sync · Spring Boot & FastAPI
 
 ---
 
