@@ -106,10 +106,10 @@
     ctx.arc(px, py, radius, 0, Math.PI * 2);
     ctx.fill();
 
-    // Rim-lit crescent arc
-    const rimPulse = 0.45 + ((Math.sin(t * 0.8) + 1) * 0.5) * 0.25;
-    ctx.strokeStyle = `rgba(244, 244, 245, ${rimPulse})`;
-    ctx.lineWidth = 1.6;
+    // Rim-lit cyan-white crescent arc
+    const rimPulse = 0.5 + ((Math.sin(t * 0.9) + 1) * 0.5) * 0.35;
+    ctx.strokeStyle = `rgba(103, 232, 249, ${rimPulse})`;
+    ctx.lineWidth = 1.8;
     ctx.beginPath();
     ctx.arc(px, py, radius, -Math.PI * 0.62, Math.PI * 0.12);
     ctx.stroke();
@@ -118,8 +118,8 @@
     const mx = -smoothMouse.nx * 22;
     const my = -smoothMouse.ny * 10;
     const mGrad = ctx.createLinearGradient(0, height * 0.55, 0, height);
-    mGrad.addColorStop(0, "rgba(39, 39, 42, 0.88)");
-    mGrad.addColorStop(1, "rgba(4, 4, 6, 0.98)");
+    mGrad.addColorStop(0, "rgba(30, 41, 59, 0.90)");
+    mGrad.addColorStop(1, "rgba(3, 5, 10, 0.98)");
 
     ctx.fillStyle = mGrad;
     ctx.beginPath();
@@ -151,8 +151,8 @@
       }
 
       ctx.fillStyle = p.violet
-        ? `rgba(167, 139, 250, ${alpha})`
-        : `rgba(228, 228, 231, ${alpha * 0.85})`;
+        ? `rgba(129, 140, 248, ${alpha})`
+        : `rgba(34, 211, 238, ${alpha * 0.85})`;
       ctx.beginPath();
       ctx.arc(px, py, p.r, 0, Math.PI * 2);
       ctx.fill();
@@ -195,8 +195,8 @@
         const b = projected[j];
         const depthAlpha = 0.14 + ((a.z + b.z + 2) / 4) * 0.28;
         ctx.strokeStyle = c.violet
-          ? `rgba(167, 139, 250, ${depthAlpha})`
-          : `rgba(244, 244, 245, ${depthAlpha})`;
+          ? `rgba(129, 140, 248, ${depthAlpha})`
+          : `rgba(34, 211, 238, ${depthAlpha})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
