@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://usernametan.github.io/usernametan/">
-    <img src="assets/hero-banner-v5.svg" alt="TANUJ. — Software Engineer & Systems Architect. Building deterministic simulations, forensic signal-processing pipelines, and spatial 3D web applications. About: Simulation & Game Systems, Applied DSP & Forensics, Spatial & Local-First Apps." width="100%" />
+    <img src="assets/hero-banner-v6.svg" alt="TANUJ. — Software Engineer & Systems Architect. Building deterministic simulations, forensic signal-processing pipelines, and spatial 3D web applications. About: Simulation & Game Systems, Applied DSP & Forensics, Spatial & Local-First Apps." width="100%" />
   </a>
 
   <br /><br />
